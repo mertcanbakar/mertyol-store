@@ -1,0 +1,23 @@
+[
+    {"key": "smartphones", "title": "Cep Telefonları"},
+    {"key": "laptops", "title": "Laptop Bilgisayarlar"},
+    {"key": "fragrances", "title": "Parfümler"},
+    {"key": "skincare", "title": "Cilt Bakım Ürünleri"},
+    {"key": "groceries", "title": "Market Alışverişi"},
+    {"key": "home-decoration", "title": "Ev Dekorasyonu"},
+    {"key": "furniture", "title": "Mobilya"},
+    {"key": "tops", "title": "Üst Giyim"},
+    {"key": "womens-dresses", "title": "Kadın Elbiseleri"},
+    {"key": "womens-shoes", "title": "Kadın Ayakkabıları"},
+    {"key": "mens-shirts", "title": "Erkek Gömlekleri"},
+    {"key": "mens-shoes", "title": "Erkek Ayakkabıları"},
+    {"key": "mens-watches", "title": "Erkek Saatleri"},
+    {"key": "womens-watches", "title": "Kadın Saatleri"},
+    {"key": "womens-bags", "title": "Kadın Çantaları"},
+    {"key": "womens-jewellery", "title": "Kadın Takıları"},
+    {"key": "sunglasses", "title": "Güneş Gözlükleri"},
+    {"key": "automotive", "title": "Otomotiv"},
+    {"key": "motorcycle", "title": "Motosiklet"},
+    {"key": "lighting", "title": "Aydınlatma"}
+  ]
+  
