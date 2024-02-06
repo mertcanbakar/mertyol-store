@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-export default function SneakBar({ message, type = "complete" }) {
+export default function SneakBar() {
   return (
     <>
       <div className="fixed inset-0 z-20 bg-black opacity-50"></div>

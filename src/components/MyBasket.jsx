@@ -32,10 +32,10 @@ export default function MyBasket() {
         </span>
       </Popover.Button>
 
-      <Popover.Panel className="absolute z-10 top-8 rounded-md rounded-tr-none p-5 right-0 w-[350px] min-h-[400px] bg-white shadow-md border">
+      <Popover.Panel className="absolute z-10 top-8 rounded-md rounded-tr-none p-5 -right-4 w-[325px] min-h-[375px] bg-white shadow-md border">
         {basketCount.length > 0 ? (
           <>
-            <div className="w-[95%] h-[300px] overflow-scroll">
+            <div className="w-full h-[275px] overflow-scroll">
               {basketCount.map((product, idx) => (
                 <BasketItem key={idx} product={product} />
               ))}

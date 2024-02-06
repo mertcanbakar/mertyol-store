@@ -23,7 +23,7 @@ export default function BasketItem({ product }) {
   return (
     <div className="w-full h-[70px] pb-4 flex justify-between border-b border-zinc-200 mb-4">
       <div className="h-full flex gap-x-2">
-        <div className="w-[100px] h-full rounded-md overflow-hidden border border-zinc-200">
+        <div className="w-[75px] h-full rounded-md overflow-hidden border border-zinc-200">
           <img
             className="w-full h-full object-cover"
             src={product.thumbnail}
@@ -31,7 +31,7 @@ export default function BasketItem({ product }) {
           />
         </div>
         <div className="h-full flex flex-col text-xs text-nowrap">
-          <h3 className="font-bold">{product.brand}</h3>
+          <h3 className="font-bold truncate w-[130px]">{product.brand}</h3>
           <h4 className=" text-zinc-500 truncate w-[100px]">{product.title}</h4>
           <div className="w-12 border border-zinc-300 flex justify-center rounded-sm">
             <button

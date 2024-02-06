@@ -1,6 +1,9 @@
 /* eslint-disable react/prop-types */
 import { Dialog } from "@headlessui/react";
 import { useState } from "react";
+import { useSelector } from "react-redux";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Modal({
   isOpen,
@@ -11,15 +14,39 @@ export default function Modal({
   setDiscountState,
 }) {
   const couponCode = "MERTYOL50";
+  const totalPrice = useSelector((state) => state.basket.totalPrice);
   const [error, setError] = useState("");
   const [errorMessage, setErrorMessage] = useState(false);
   const handleCouponCode = () => {
     if (!discountState) {
       if (code === couponCode) {
-        setDiscountState(true);
-        setIsOpen(false);
-        setErrorMessage(false);
-        setCode("");
+        if (totalPrice >= 100) {
+          setDiscountState(true);
+          setIsOpen(false);
+          setErrorMessage(false);
+          setCode("");
+          toast("Kupon kodun başarıyla kullanıldı.", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
+        } else {
+          toast.error("Bu kupon $100 ve üzeri alışverişlerde geçerlidir.", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
+        }
       } else {
         setError("Lütfen geçerli bir kupon kodu giriniz");
         setErrorMessage(true);
